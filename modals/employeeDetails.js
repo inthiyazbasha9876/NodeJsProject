@@ -37,6 +37,10 @@ const empDetailsSchema = new mongoose.Schema({
     createdDate:{
         type:Date,
         default: Date.now
+    },
+    status:{
+        type:Boolean,
+        default:true
     }
 })
 

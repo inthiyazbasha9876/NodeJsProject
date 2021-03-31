@@ -1,13 +1,8 @@
 const mongoose = require('mongoose')
 
 const empLoingSchema = new mongoose.Schema({
-    empId:{
-        type: Number,
-        required : true,
-        unique : true
-    },
     userName:{
-        type: String,
+        type: Number,
         required : true,
         unique: true
     },
@@ -18,6 +13,15 @@ const empLoingSchema = new mongoose.Schema({
     passwordFlag : {
         type: Boolean,
         default: false
+    },
+    status:{
+        type:Boolean,
+        default:true
+    },
+    employee :{
+        type: mongoose.Schema.Types.ObjectId,
+        ref:'empDetails',
+        required: true
     }
 })
 
