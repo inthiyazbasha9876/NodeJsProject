@@ -15,7 +15,8 @@ const empDetailsSchema = new mongoose.Schema({
         required : true
     },
     middleName : {
-        type: String
+        type: String,
+        required:false
     },
     DateOfBirth : {
         type: String,
